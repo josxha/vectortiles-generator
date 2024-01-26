@@ -13,3 +13,4 @@ data/
 
 # Temp edit files
 *.swp
+.idea/

@@ -1,11 +1,11 @@
-FROM mdillon/postgis:9.5
+FROM postgis/postgis:16-3.4
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     wget \
  && rm -rf /var/lib/apt/lists/*
 
 ENV VT_UTIL_DIR=/opt/postgis-vt-util \
-    VT_UTIL_URL="https://raw.githubusercontent.com/mapbox/postgis-vt-util/v1.0.0/postgis-vt-util.sql" \
+    VT_UTIL_URL="https://raw.githubusercontent.com/mapbox/postgis-vt-util/master/postgis-vt-util.sql" \
     SQL_FUNCTIONS_FILE=/usr/src/app/functions.sql \
     SQL_VIEWS_FILE=/usr/src/app/views.sql
 
